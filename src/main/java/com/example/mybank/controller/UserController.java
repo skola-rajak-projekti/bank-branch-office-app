@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.mybank.model.User;
-import com.example.mybank.service.impl.UserService;
+import com.example.mybank.model.Klijent;
+import com.example.mybank.service.UserService;
 
 @RestController
-@RequestMapping({"/api"})
+@RequestMapping({"/api/client"})
 public class UserController {
 
     @Autowired
@@ -24,27 +24,27 @@ public class UserController {
     
 
     @PostMapping
-    public User create(@RequestBody User user){
+    public Klijent create(@RequestBody Klijent user){
         return userService.create(user);
     }
 
     @GetMapping(path = {"/{id}"})
-    public User findOne(@PathVariable("id") int id){
-        return userService.findById(id);
+    public Klijent findOne(@PathVariable("id") long id){
+        return userService.findByJMBG(id);
     }
 
     @PutMapping
-    public User update(@RequestBody User user){
+    public Klijent update(@RequestBody Klijent user){
         return userService.update(user);
     }
 
     @DeleteMapping(path ={"/{id}"})
-    public User delete(@PathVariable("id") int id) {
+    public Klijent delete(@PathVariable("id") int id) {
         return userService.delete(id);
     }
 
-    @GetMapping
-    public List<User> findAll(){
+    @GetMapping(path = {"/all"})
+    public List<Klijent> findAll(){
         return userService.findAll();
     }
 

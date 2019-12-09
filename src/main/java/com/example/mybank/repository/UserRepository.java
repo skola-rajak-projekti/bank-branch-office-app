@@ -2,18 +2,25 @@ package com.example.mybank.repository;
 
 import java.util.List;
 
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.query.Param;
 
-import com.example.mybank.model.User;
+import com.example.mybank.model.Klijent;
 
-public interface UserRepository extends Repository<User, Long>{
+public interface UserRepository extends Repository<Klijent, Long>{
 
 
-    void delete(User user);
+    void delete(Klijent user);
 
-    List<User> findAll();
+    List<Klijent> findAll();
 
-    User findById(int id);
+    Klijent findById(int id);
 
-    User save(User user);
+    Klijent save(Klijent user);
+    
+    @Query("SELECT t FROM Klijent t where t.jmbg = :jmbg") 
+    Klijent findByJMBG(@Param("jmbg") long jmbg);
+    
+    
     }
