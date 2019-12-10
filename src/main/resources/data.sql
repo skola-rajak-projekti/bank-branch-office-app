@@ -5,7 +5,7 @@ INSERT INTO  `users` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(5, '
 INSERT INTO  `users` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(4, 'Lena'     ,'Mlakar'   ,2708996865070 ,'Jovina 2, Pančevo', '+381549654', 'mira@gmail.com');
 INSERT INTO  `users` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(6, 'Veronika' ,'Jurić'    ,2707994815060 ,'Jovina 2, Sombor', '+381549654', 'mira@gmail.com');
 
-INSERT INTO `accounts` (id, brojracuna, status, pripadaklijentu, tipracuna) VALUES (1, '3628441' , 'AKTIVAN' , '2707994815061', 'ziro');
-INSERT INTO `accounts` (id, brojracuna, status, pripadaklijentu, tipracuna) VALUES (2, '3628551' , 'AKTIVAN' , '2707994815060', 'ziro');
-INSERT INTO `accounts` (id, brojracuna, status, pripadaklijentu, tipracuna) VALUES (3, '9985801' , 'AKTIVAN' , '2707994815060', 'devizni');
-INSERT INTO `accounts` (id, brojracuna, status, pripadaklijentu, tipracuna) VALUES (4, '3628440' , 'AKTIVAN' , '2708996865070', 'ziro');
+INSERT INTO `accounts` (id, brojracuna, status, pripadaklijentu, tipracuna, stanje, rezervisanasredstva, raspolozivasredstva, valuta) VALUES (1, '3628441' , 'AKTIVAN' , '2707994815060', 'ziro', 	  CAST(17000.00 AS DECIMAL),  CAST(0.0 AS DECIMAL),  CAST(17000 AS DECIMAL),  'RSD');
+INSERT INTO `accounts` (id, brojracuna, status, pripadaklijentu, tipracuna, stanje, rezervisanasredstva, raspolozivasredstva, valuta) VALUES (2, '3628551' , 'AKTIVAN' , '2707994815060', 'ziro',	  CAST(1200.00 AS DECIMAL),  CAST(200 AS DECIMAL),  CAST(1000 AS DECIMAL),  'RSD');
+INSERT INTO `accounts` (id, brojracuna, status, pripadaklijentu, tipracuna, stanje, rezervisanasredstva, raspolozivasredstva, valuta) VALUES (3, '9985801' , 'AKTIVAN' , '2707994815060', 'devizni', CAST(10.00 AS DECIMAL), CAST(1 AS DECIMAL), CAST(9 AS DECIMAL),  'EUR');
+INSERT INTO `accounts` (id, brojracuna, status, pripadaklijentu, tipracuna, stanje, rezervisanasredstva, raspolozivasredstva, valuta) VALUES (4, '3628440' , 'AKTIVAN' , '2708996865070', 'ziro', 	  CAST(0.0 AS DECIMAL),CAST(0.0 AS DECIMAL),CAST(0.0 AS DECIMAL),  'RSD');

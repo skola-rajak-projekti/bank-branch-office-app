@@ -32,7 +32,7 @@ function findByName(searchKey) {
 				$('#userList').html("<li> Nepoznati korisnik </li>");
 			else{
 				
-				$('#client-name').text(" Ime i prezime klijenta: " + data.ime + " " + data.prezime);			
+				$('#client-name').html("<h3 class='card-title'> Klijent : " + data.ime + " " + data.prezime + " </h3>");			
 				$('#client-data-div').removeClass('client-data');	
 				$.ajax({
 					type: 'GET',
@@ -47,12 +47,21 @@ function findByName(searchKey) {
 
 	
 }
+function makeAccount(){
+	$('#clients-accounts').text(" froma za otvaranej racuna xd");
+}
 
 function renderAccounts(data){	 
-			console.log(data);
+	$('#clients-accounts').text("");	
+		if(data.length == 0){
+			$('#clients-accounts').append("<tr><td rowspan='10'>Klijent nema otvorenih racuna. <a href='javascript:makeAccount()'> Napravi novi. </a></td></tr>");
+		}else{			
 			$.each(data, function(index, item) {
-				$('#clients-accounts').append("<tr><td> " + item.brojRacuna + "</td> <td>" + item.tipRacuna +"</td></tr>");
+				console.log(item);
+				var text = "<tr><td>" + item.brojRacuna + "</td> <td>" + item.tipRacuna + "</td><td> <a href=''> <img src='izvod.jpg' height='45px'> </a>  </td> <td>" + item.stanje +"</td><td> " + item.rezervisanaSredstva + "</td> <td>" + item.raspolozivaSredstva +"</td><td>" + item.valuta + "</td></tr>";
+				$('#clients-accounts').append(text);
 			});		
+		}
 }
 function search(searchKey){
 	if (searchKey == '') 
