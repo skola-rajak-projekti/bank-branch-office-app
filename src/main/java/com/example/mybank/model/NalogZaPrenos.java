@@ -10,6 +10,8 @@ public class NalogZaPrenos {
 	private String racunDuznika;
 	private String racunPoverioca;
 	private Float iznos;
+	private String valuta;
+	
 	
 	public long getId() {
 		return id;
@@ -52,6 +54,12 @@ public class NalogZaPrenos {
 	}
 	public void setIznos(Float iznos) {
 		this.iznos = iznos;
+	}
+	public String getValuta() {
+		return valuta;
+	}
+	public void setValuta(String valuta) {
+		this.valuta = valuta;
 	}
 
 }

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nalog_za_prenos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/C:/Users/Dragon/Documents/OxygenXMLEditor/samples/css/nalogZaPrenos.xsd" id_poruke="984200334" duznik="Jovan Milivojevic" poverilac="Milica Tomic"
+     iznos="1500" poziv_na_broj_zaduzenje="918131223" poziv_na_broj_odobrenje="1014823259" sifra_placanja="260"
+     broj_modela_za_racun_duznika="3" broj_modela_za_racun_poverioca="71" mesto_prijema="Novi Sad"
+     datum_prijema="2020-02-28" datum_valute="2021-05-07" da_li_je_hitno="false"/>

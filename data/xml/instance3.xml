@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Nalog_za_prenos xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="file:/C:/Users/Dragon/Documents/OxygenXMLEditor/samples/css/nalogZaPrenos.xsd" id_poruke="8954621" duznik="C.Wrnox95ewLjON.XjJf9xq-d0" poverilac="N7QldCgK9nkYX9" iznos="1974945230.553"
+     racun_duznika="234211396" racun_poverioca="2064881635" svrha_placanja="vEUZOm_" valuta="RSD" poziv_na_broj_zaduzenje="2086577378"
+     poziv_na_broj_odobrenje="1424605114" sifra_placanja="265" broj_modela_za_racun_duznika="68" broj_modela_za_racun_poverioca="18"
+     mesto_prijema="MTq.tDry.FAUNPciucOHWHgHj-fr" datum_prijema="2021-09-08" datum_valute="2020-01-06"
+     da_li_je_hitno="false"/>

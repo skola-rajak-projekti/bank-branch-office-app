@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="Nalog_za_prenos">
+        <xs:complexType>
+            <xs:attribute name="id_poruke" type="xs:string" use="required"/>
+            <xs:attribute name="duznik" type="xs:string" use="required"/>
+            <xs:attribute name="poverilac" type="xs:string" use="required"/>
+            <xs:attribute name="iznos" type="xs:double" use="required"/>
+            <xs:attribute name="racun_duznika" form="unqualified" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="18"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="racun_poverioca" use="required">
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:totalDigits value="18"/>
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="svrha_placanja" type="xs:string"/>
+            <xs:attribute name="valuta" default="RSD" use="optional">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string"/>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="poziv_na_broj_zaduzenje">
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="poziv_na_broj_odobrenje">
+                <xs:simpleType>
+                    <xs:restriction base="xs:long">
+                        <xs:minInclusive value="0"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="sifra_placanja" use="optional">
+                <xs:simpleType>
+                    <xs:restriction base="xs:short">
+                        <xs:minInclusive value="220"/>
+                        <xs:maxInclusive value="290"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="broj_modela_za_racun_duznika">
+                <xs:simpleType>
+                    <xs:restriction base="xs:short">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="97"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="broj_modela_za_racun_poverioca">
+                <xs:simpleType>
+                    <xs:restriction base="xs:short">
+                        <xs:minInclusive value="0"/>
+                        <xs:maxInclusive value="97"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="mesto_prijema" type="xs:string" use="required"/>
+            <xs:attribute name="datum_prijema" type="xs:date" use="required"/>
+            <xs:attribute name="datum_valute" type="xs:date" use="required"/>
+            <xs:attribute name="da_li_je_hitno" default="false" type="xs:boolean" use="optional"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

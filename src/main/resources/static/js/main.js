@@ -10,6 +10,13 @@ $('#btnSearch').click(function() {
 	search($('#searchKey').val());
 	return false;
 });
+//Register listeners
+
+$('#btnUpload').click(function() {
+	
+	uploadFile();
+	return false;
+});
 
 function findAllUsers() {
 	
@@ -89,4 +96,34 @@ function renderUser(data){
 			$('#client-data-div').removeClass('client-data');
 		}
 
+}
+
+
+
+/// -----------------------------------------------------------
+
+
+function uploadFile() {
+	  var form = $('#fileUploadForm')[0];
+	    var data = new FormData(form);
+	
+	$.ajax({
+		type: 'POST',
+		data : data,
+		url: rootURL + "/transfer-order" ,
+		enctype: 'multipart/form-data',
+		contentType: false,
+        processData: false,
+        cache: false,
+		
+		success: render
+	});
+}
+
+function render(data){
+	console.log(data);
+	
+	el = document.getElementById("recipient-name");
+	el.value = data;	
+	$('#modal').modal('show');
 }
