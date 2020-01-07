@@ -1,9 +1,9 @@
-INSERT INTO  `users` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(1, 'Skorosava','Stakic'   ,1542159852361 ,'Bulevar Cara Dušsana 31, 22317 Loznica', '+381/549-624', 'rajna77@susic.com');
-INSERT INTO  `users` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(2, 'Maksim'   ,'Ilic'     ,1711981701043 ,'Bulevar Mihajla Pupina 52, 41640 Kruševac', '+381549654', 'grabic.gajo@tontic.biz');
-INSERT INTO  `users` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(3, 'Mihael'   ,'Novaković' ,1711981891040 ,'Jovina 2, Sremska Mitrovica', '+381549624', 'pera@gmail.com');
-INSERT INTO  `users` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(5, 'Dominik'  ,'Janković' ,1412998891028 ,'Jovina 2, Sremska Mitrovica', '+381549624', 'pera@gmail.com');
-INSERT INTO  `users` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(4, 'Lena'     ,'Mlakar'   ,2708996865070 ,'Jovina 2, Pančevo', '+381549654', 'mira@gmail.com');
-INSERT INTO  `users` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(6, 'Veronika' ,'Jurić'    ,2707994815060 ,'Jovina 2, Sombor', '+381549654', 'mira@gmail.com');
+INSERT INTO  `fizickalica` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(2, 'Maksim'   ,'Ilic'     ,1711981701043 ,'Bulevar Mihajla Pupina 52, 41640 Kruševac', '+381549654', 'grabic.gajo@tontic.biz');
+INSERT INTO  `fizickalica` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(1, 'Skorosava','Stakic'   ,1542159852361 ,'Bulevar Cara Dušsana 31, 22317 Loznica', '+381/549-624', 'rajna77@susic.com');
+INSERT INTO  `fizickalica` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(3, 'Mihael'   ,'Novaković' ,1711981891040 ,'Jovina 2, Sremska Mitrovica', '+381549624', 'pera@gmail.com');
+INSERT INTO  `fizickalica` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(5, 'Dominik'  ,'Janković' ,1412998891028 ,'Jovina 2, Sremska Mitrovica', '+381549624', 'pera@gmail.com');
+INSERT INTO  `fizickalica` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(4, 'Lena'     ,'Mlakar'   ,2708996865070 ,'Jovina 2, Pančevo', '+381549654', 'mira@gmail.com');
+INSERT INTO  `fizickalica` (id, ime, prezime, JMBG, adresa, telefon,email) VALUES(6, 'Veronika' ,'Jurić'    ,2707994815060 ,'Jovina 2, Sombor', '+381549654', 'mira@gmail.com');
 
 INSERT INTO `accounts` (id, brojracuna, status, pripadaklijentu, tipracuna, stanje, rezervisanasredstva, raspolozivasredstva, valuta) VALUES (1, '3628441' , 'AKTIVAN' , '2707994815060', 'ziro', 	  CAST(17000.00 AS DECIMAL),  CAST(0.0 AS DECIMAL),  CAST(17000 AS DECIMAL),  'RSD');
 INSERT INTO `accounts` (id, brojracuna, status, pripadaklijentu, tipracuna, stanje, rezervisanasredstva, raspolozivasredstva, valuta) VALUES (2, '3628551' , 'AKTIVAN' , '2707994815060', 'ziro',	  CAST(1200.00 AS DECIMAL),  CAST(200 AS DECIMAL),  CAST(1000 AS DECIMAL),  'RSD');

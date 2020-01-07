@@ -3,6 +3,8 @@ package com.example.mybank.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,40 +14,41 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.mybank.model.Klijent;
-import com.example.mybank.service.UserService;
+import com.example.mybank.model.FizickoLice;
+import com.example.mybank.service.FizickoLiceService;
 
 @RestController
 @RequestMapping({"/api/client"})
-public class UserController {
+public class FizickoLiceController {
 
     @Autowired
-    private UserService userService;
+    private FizickoLiceService service;
     
 
     @PostMapping
-    public Klijent create(@RequestBody Klijent user){
-        return userService.create(user);
+    public FizickoLice create(@RequestBody FizickoLice user){
+        return service.create(user);
     }
 
     @GetMapping(path = {"/{id}"})
-    public Klijent findOne(@PathVariable("id") long id){
-        return userService.findByJMBG(id);
+    public FizickoLice findOne(@PathVariable("id") long id){
+        return service.findByJMBG(id);
     }
 
     @PutMapping
-    public Klijent update(@RequestBody Klijent user){
-        return userService.update(user);
+    public FizickoLice update(@RequestBody FizickoLice user){
+        return service.update(user);
     }
 
     @DeleteMapping(path ={"/{id}"})
-    public Klijent delete(@PathVariable("id") int id) {
-        return userService.delete(id);
+    public FizickoLice delete(@PathVariable("id") int id) {
+        return service.delete(id);
     }
-
+    
+	@CrossOrigin(origins = "http://localhost:4200")	
     @GetMapping(path = {"/all"})
-    public List<Klijent> findAll(){
-        return userService.findAll();
+    public List<FizickoLice> findAll(){
+        return service.findAll();
     }
 
 }

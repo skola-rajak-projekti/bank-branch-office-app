@@ -5,25 +5,25 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.mybank.model.Klijent;
-import com.example.mybank.repository.UserRepository;
-import com.example.mybank.service.UserService;
+import com.example.mybank.model.FizickoLice;
+import com.example.mybank.repository.FizickoLiceRepository;
+import com.example.mybank.service.FizickoLiceService;
 
 
 @Service
-public class UserServiceImpl  implements UserService{
+public class FizickoLiceServiceImpl  implements FizickoLiceService{
 
     @Autowired
-    private UserRepository repository;
+    private FizickoLiceRepository repository;
 
     @Override
-    public Klijent create(Klijent user) {
+    public FizickoLice create(FizickoLice user) {
         return repository.save(user);
     }
 
     @Override
-    public Klijent delete(int id) {
-        Klijent user = findById(id);
+    public FizickoLice delete(int id) {
+    	FizickoLice user = findById(id);
         if(user != null){
             repository.delete(user);
         }
@@ -31,24 +31,24 @@ public class UserServiceImpl  implements UserService{
     }
 
     @Override
-    public List<Klijent> findAll() {
+    public List<FizickoLice> findAll() {
         return repository.findAll();
     }
     
     @Override
-    public Klijent findById(int id) {
+    public FizickoLice findById(int id) {
         return repository.findById(id);
     }
     
 
 
     @Override
-    public Klijent update(Klijent user) {
+    public FizickoLice update(FizickoLice user) {
         return null;
     }
 
 	@Override
-	public Klijent findByJMBG(long jmbg) {		
+	public FizickoLice findByJMBG(long jmbg) {		
 		return repository.findByJMBG(jmbg);
 	}
 

@@ -1,8 +1,5 @@
 var rootURL = "http://localhost:8080/api";
 
-function getFormuZaPrenos(){
-	alert("nn");
-}
 
 
 //Register listeners

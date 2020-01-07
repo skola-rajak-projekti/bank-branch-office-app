@@ -3,7 +3,22 @@ body {
 }
 
 
-
+.h{
+    height: 45px;
+}
+.sh{
+    height: 36px;
+}
+.w{
+    width: 270px;
+}
+.m {
+    width: 150px;
+}
+.s{
+    width: 80px;
+  
+}
 .main-head{
     height: 150px;
     background: #FFF;
